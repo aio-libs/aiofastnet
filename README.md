@@ -22,6 +22,15 @@
   </a>
 </p>
 
+<p align="center">
+  <a href="https://matrix.to/#/%23aio-libs:matrix.org">
+    <img src="https://img.shields.io/matrix/aio-libs:matrix.org?label=Discuss%20on%20Matrix%20at%20%23aio-libs%3Amatrix.org&logo=matrix&server_fqdn=matrix.org&style=flat" alt="Matrix Room — #aio-libs:matrix.org">
+  </a>
+  <a href="https://matrix.to/#/%23aio-libs-space:matrix.org">
+    <img src="https://img.shields.io/matrix/aio-libs-space:matrix.org?label=Discuss%20on%20Matrix%20at%20%23aio-libs-space%3Amatrix.org&logo=matrix&server_fqdn=matrix.org&style=flat" alt="Matrix Space — #aio-libs-space:matrix.org">
+  </a>
+</p>
+
 `aiofastnet` is a very efficient C/Cython drop-in reimplementation of asyncio's loop Transport/Protocol layer.
 You can use it with your current event loop (asyncio loops, uvloop, winloop, etc.) to improve overall networking performance.
 
@@ -446,6 +455,11 @@ one thread.
 ## Building From Source
 
 1. Fork and clone the repository.
+
+   ```console
+   $ git clone git@github.com:tarasko/aiofastnet.git
+   $ cd aiofastnet
+   ```
 
 2. Create and activate a virtual environment:
 
