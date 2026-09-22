@@ -5,11 +5,11 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/tarasko/aiofastnet/actions/workflows/run-tests.yml?query=branch%3Amaster">
-    <img src="https://img.shields.io/github/actions/workflow/status/tarasko/aiofastnet/run-tests.yml?branch=master&label=tests" alt="Test status">
+  <a href="https://github.com/aio-libs/aiofastnet/actions/workflows/run-tests.yml?query=branch%3Amaster">
+    <img src="https://img.shields.io/github/actions/workflow/status/aio-libs/aiofastnet/run-tests.yml?branch=master&label=tests" alt="Test status">
   </a>
-  <a href="https://codecov.io/github/tarasko/aiofastnet">
-    <img src="https://codecov.io/github/tarasko/aiofastnet/graph/badge.svg?token=TC4IG6K78V" alt="codecov">
+  <a href="https://codecov.io/github/aio-libs/aiofastnet">
+    <img src="https://codecov.io/github/aio-libs/aiofastnet/graph/badge.svg?token=TC4IG6K78V" alt="codecov">
   </a>
   <a href="https://pypi.org/project/aiofastnet">
     <img src="https://badge.fury.io/py/aiofastnet.svg" alt="Latest PyPI package version">
@@ -17,7 +17,7 @@
   <a href="https://pypistats.org/packages/aiofastnet">
     <img src="https://img.shields.io/pypi/dm/aiofastnet.svg" alt="Downloads count">
   </a>
-  <a href="https://app.codspeed.io/tarasko/aiofastnet?utm_source=badge">
+  <a href="https://app.codspeed.io/aio-libs/aiofastnet?utm_source=badge">
     <img src="https://img.shields.io/endpoint?url=https://codspeed.io/badge.json" alt="CodSpeed">
   </a>
 </p>
@@ -45,11 +45,11 @@ The benchmark below compares echo round-trips over loopback for TCP and SSL.
 The exact gains depend on workload, message sizes, CPU, OpenSSL version, and how
 much of your total runtime is spent in transport/SSL plumbing.
 
-[![Benchmark](https://raw.githubusercontent.com/tarasko/aiofastnet/master/examples/benchmark.png)](https://github.com/tarasko/aiofastnet/blob/master/examples/benchmark.png)
+[![Benchmark](https://raw.githubusercontent.com/aio-libs/aiofastnet/master/examples/benchmark.png)](https://github.com/aio-libs/aiofastnet/blob/master/examples/benchmark.png)
 
-[![Speedup](https://raw.githubusercontent.com/tarasko/aiofastnet/master/examples/benchmark_speedup.png)](https://github.com/tarasko/aiofastnet/blob/master/examples/benchmark_speedup.png)
+[![Speedup](https://raw.githubusercontent.com/aio-libs/aiofastnet/master/examples/benchmark_speedup.png)](https://github.com/aio-libs/aiofastnet/blob/master/examples/benchmark_speedup.png)
 
-Source: [examples/benchmark.py](https://github.com/tarasko/aiofastnet/blob/master/examples/benchmark.py)
+Source: [examples/benchmark.py](https://github.com/aio-libs/aiofastnet/blob/master/examples/benchmark.py)
 
 In these benchmarks, `aiofastnet` is up to
 2.7x faster than standard `asyncio` and up to 1.6x faster than uvloop for TLS
@@ -58,11 +58,11 @@ connections.
 `aiofastnet` is fully compatible with free-threaded Python builds and scales
 as expected when multiple event loops run in parallel across multiple threads.
 
-[![SSL Threaded Benchmark](https://raw.githubusercontent.com/tarasko/aiofastnet/master/examples/benchmark_threaded_tls.png)](https://github.com/tarasko/aiofastnet/blob/master/examples/benchmark_threaded_tls.png)
+[![SSL Threaded Benchmark](https://raw.githubusercontent.com/aio-libs/aiofastnet/master/examples/benchmark_threaded_tls.png)](https://github.com/aio-libs/aiofastnet/blob/master/examples/benchmark_threaded_tls.png)
 
-[![TCP Threaded Benchmark](https://raw.githubusercontent.com/tarasko/aiofastnet/master/examples/benchmark_threaded_tcp.png)](https://github.com/tarasko/aiofastnet/blob/master/examples/benchmark_threaded_tcp.png)
+[![TCP Threaded Benchmark](https://raw.githubusercontent.com/aio-libs/aiofastnet/master/examples/benchmark_threaded_tcp.png)](https://github.com/aio-libs/aiofastnet/blob/master/examples/benchmark_threaded_tcp.png)
 
-Source: [examples/benchmark_threaded.py](https://github.com/tarasko/aiofastnet/blob/master/examples/benchmark_threaded.py)
+Source: [examples/benchmark_threaded.py](https://github.com/aio-libs/aiofastnet/blob/master/examples/benchmark_threaded.py)
 
 ## How is this possible?
 
@@ -394,8 +394,8 @@ inside the environment.
 
 KTLS support by kernel version is outlined [here](https://delthas.fr/blog/2023/kernel-tls/).
 
-Check out [aiohttp_ktls_fileresponse.py](https://github.com/tarasko/aiofastnet/blob/master/examples/aiohttp_ktls_fileresponse.py)
-and [aiohttp_ws_speedup.py](https://github.com/tarasko/aiofastnet/blob/master/examples/aiohttp_ws_speedup.py) for examples showing
+Check out [aiohttp_ktls_fileresponse.py](https://github.com/aio-libs/aiofastnet/blob/master/examples/aiohttp_ktls_fileresponse.py)
+and [aiohttp_ws_speedup.py](https://github.com/aio-libs/aiofastnet/blob/master/examples/aiohttp_ws_speedup.py) for examples showing
 how you can speed up aiohttp (or any other asyncio application).
 
 Some other useful links:
@@ -412,12 +412,12 @@ legacy GIL back on, so separate event loops may run in separate threads.
 
 The repository includes several free-threading examples:
 
-- [examples/benchmark_threaded.py](https://github.com/tarasko/aiofastnet/blob/master/examples/benchmark_threaded.py) runs multiple echo client/server pairs in
+- [examples/benchmark_threaded.py](https://github.com/aio-libs/aiofastnet/blob/master/examples/benchmark_threaded.py) runs multiple echo client/server pairs in
   parallel to compare single-loop and multi-threaded execution.
-- [examples/echo_server_threaded.py](https://github.com/tarasko/aiofastnet/blob/master/examples/echo_server_threaded.py) starts one listening echo server per
+- [examples/echo_server_threaded.py](https://github.com/aio-libs/aiofastnet/blob/master/examples/echo_server_threaded.py) starts one listening echo server per
   thread on the same port with `reuse_port=True` so the kernel can distribute
   incoming connections across worker threads.
-- [examples/echo_client_threaded.py](https://github.com/tarasko/aiofastnet/blob/master/examples/echo_client_threaded.py) starts one echo client per thread and
+- [examples/echo_client_threaded.py](https://github.com/aio-libs/aiofastnet/blob/master/examples/echo_client_threaded.py) starts one echo client per thread and
   drives them in parallel against the shared server port.
 
 Transport objects remain thread-affine. Methods such as `write()`,
@@ -445,12 +445,7 @@ one thread.
 
 ## Building From Source
 
-1. Clone the repository:
-
-   ```console
-   $ git clone git@github.com:tarasko/aiofastnet.git
-   $ cd aiofastnet
-   ```
+1. Fork and clone the repository.
 
 2. Create and activate a virtual environment:
 
