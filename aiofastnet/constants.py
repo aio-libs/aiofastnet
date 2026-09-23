@@ -30,7 +30,7 @@ SSL_BIO_SIZE_DEFAULTS = {
 DATA_RECEIVED_MAX_SIZE = 256 * 1024
 DATAGRAM_RECEIVED_MAX_SIZE = 64 * 1024
 
-# See https://github.com/tarasko/aiofastnet/issues/62
+# See https://github.com/aio-libs/aiofastnet/issues/62
 # Limit the amount read before returning to the event loop. This gives
 # protocols that wake an async consumer from data_received() a chance to
 # process queued data and prevents one busy connection from starving others.

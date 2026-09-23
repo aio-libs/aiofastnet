@@ -31,9 +31,9 @@ requires = ["setuptools >= 78.0", "wheel", "Cython >= 3.3"]
 build-backend = "setuptools.build_meta"
 
 [project.urls]
-Homepage = "https://github.com/tarasko/aiofastnet"
-Repository = "https://github.com/tarasko/aiofastnet"
-Issues = "https://github.com/tarasko/aiofastnet/issues"
+Homepage = "https://github.com/aio-libs/aiofastnet"
+Repository = "https://github.com/aio-libs/aiofastnet"
+Issues = "https://github.com/aio-libs/aiofastnet/issues"
 Documentation = "https://aiofastnet.readthedocs.io/en/latest"
 
 [tool.setuptools]
