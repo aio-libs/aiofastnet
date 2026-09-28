@@ -18,7 +18,7 @@ g[mask="url(#letter-counters)"] > path[fill="#32B04D"] {
 g[mask="url(#letter-counters)"] > path[fill="#68AFE8"],
 g[mask="url(#letter-counters)"] > path[fill="#61A8E4"],
 g[mask="url(#letter-counters)"] > path[fill="#5A9FDE"] {
-  fill: #238636;
+  fill: #32AF4C;
 }
 g[mask="url(#letter-counters)"] > path[fill="#F8CC10"] {
   fill: #C05A00;
