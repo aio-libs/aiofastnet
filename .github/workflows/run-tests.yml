@@ -255,6 +255,9 @@ jobs:
   benchmarks:
     name: benchmarks
     runs-on: ubuntu-latest
+    permissions:
+      contents: read # required for actions/checkout
+      id-token: write # required for OIDC authentication with CodSpeed
     timeout-minutes: 20
 
     steps:
