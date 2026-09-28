@@ -1,7 +1,7 @@
 #
 
 <p align="center">
-  <img src="aiofastnet.png" alt="aiofastnet" width="520">
+  <img src="aiofastnet.svg" alt="aiofastnet" width="520">
 </p>
 
 <p align="center">
