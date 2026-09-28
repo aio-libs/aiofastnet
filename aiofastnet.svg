@@ -2,6 +2,28 @@
 <!-- Generator: visioncortex VTracer 0.6.12 -->
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1983" height="793" viewBox="0 0 1983 793">
 <defs>
+<style>
+/* Dark enough for light backgrounds and bright enough for dark backgrounds. */
+g[mask="url(#letter-counters)"] > path[fill="#1D71DC"],
+g[mask="url(#letter-counters)"] > path[fill="#1A6FDC"],
+g[mask="url(#letter-counters)"] > path[fill="#1E73DE"] {
+  fill: #1D71DC;
+}
+g[mask="url(#letter-counters)"] > path[fill="#30AF4C"],
+g[mask="url(#letter-counters)"] > path[fill="#32B04C"],
+g[mask="url(#letter-counters)"] > path[fill="#31AF4C"],
+g[mask="url(#letter-counters)"] > path[fill="#32B04D"] {
+  fill: #C05A00;
+}
+g[mask="url(#letter-counters)"] > path[fill="#68AFE8"],
+g[mask="url(#letter-counters)"] > path[fill="#61A8E4"],
+g[mask="url(#letter-counters)"] > path[fill="#5A9FDE"] {
+  fill: #238636;
+}
+g[mask="url(#letter-counters)"] > path[fill="#F8CC10"] {
+  fill: #C05A00;
+}
+</style>
 <mask id="letter-counters" maskUnits="userSpaceOnUse" x="0" y="0" width="1983" height="793">
 <rect width="1983" height="793" fill="white"/>
 <path d="M0 0 C0.388 0.122 0.388 0.122 2.352 0.742 C14.592 5.024 22.756 13.568 28.504 24.988 C31.19 31.011 32.829 36.414 33 43 C33.05 43.828 33.101 44.655 33.152 45.508 C33.689 60.242 29.32 73.969 19.875 85.312 C11.456 94.144 1.068 99.134 -11.117 99.432 C-25.671 99.465 -35.868 95.705 -47 86 C-49.368 83.507 -51.228 80.941 -53 78 C-53.461 77.251 -53.923 76.502 -54.398 75.73 C-60.585 64.662 -60.403 52.372 -60 40 C-60.005 39.263 -60.01 38.525 -60.016 37.766 C-59.583 27.652 -52.145 17.1 -45.379 10.117 C-32.767 -1.107 -16.19 -5.397 0 0 Z" fill="black" transform="translate(926,364)"/>
