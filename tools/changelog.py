@@ -1,4 +1,4 @@
-"""Prepare and extract entries from CHANGES.md."""
+"""Prepare and extract entries from CHANGELOG.md."""
 
 import argparse
 import re
@@ -71,7 +71,7 @@ def extract_release_notes(path: Path, version: str) -> str:
 
 def _build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--changelog", type=Path, default=Path("CHANGES.md"))
+    parser.add_argument("--changelog", type=Path, default=Path("CHANGELOG.md"))
     subparsers = parser.add_subparsers(dest="command", required=True)
 
     prepare_parser = subparsers.add_parser("prepare", help="finalize the Unreleased section")

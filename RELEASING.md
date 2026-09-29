@@ -5,7 +5,7 @@ This document describes the maintainer workflow for publishing aiofastnet to PyP
 ## Set release version and prepare changelog
 
 1. Create a branch release/1.2.0
-2. Ensure every user-visible change is described under `Unreleased` in `CHANGES.md`. 
+2. Ensure every user-visible change is described under `Unreleased` in `CHANGELOG.md`. 
 3. Choose the new version (1.2.0) and update `__version__` in `aiofastnet/version.py`.
 4. Finalize the changelog using the same version.
 
@@ -30,11 +30,11 @@ $ git tag -a v1.2.0 -m "Release 1.2.0"
 $ git push origin v1.2.0
 ```
 
-The tag version must match both `aiofastnet/version.py` and the finalized heading in `CHANGES.md`.
+The tag version must match both `aiofastnet/version.py` and the finalized heading in `CHANGELOG.md`.
 
 Pushing a `v*` tag starts `.github/workflows/release.yml`. The workflow:
 
-1. Extracts the matching version section from `CHANGES.md`. Missing or empty notes prevent publishing.
+1. Extracts the matching version section from `CHANGELOG.md`. Missing or empty notes prevent publishing.
 2. Builds the source distribution and platform wheels.
 3. Publishes all distributions to PyPI through the `pypi` environment and Trusted Publishing.
 4. Signs the distributions with Sigstore after PyPI publishing succeeds.
@@ -49,7 +49,7 @@ PyPI generates Sigstore-backed attestations for the published distributions auto
 After the workflow completes:
 
 - Confirm that the expected version and distributions are present on PyPI.
-- Confirm that the GitHub Release contains the same notes as `CHANGES.md` and includes the source distribution, all wheels, and their Sigstore
+- Confirm that the GitHub Release contains the same notes as `CHANGELOG.md` and includes the source distribution, all wheels, and their Sigstore
   bundles.
 - Install the new version in a clean environment and verify that `aiofastnet.__version__` reports the expected value.
 

@@ -22,7 +22,7 @@ CHANGELOG = """\
 
 
 def test_prepare_and_extract_changelog(tmp_path):
-    path = tmp_path / "CHANGES.md"
+    path = tmp_path / "CHANGELOG.md"
     path.write_text(CHANGELOG)
 
     prepare_changelog(path, "1.1.0")
@@ -58,7 +58,7 @@ def test_prepare_and_extract_changelog(tmp_path):
 
 
 def test_prepare_rejects_empty_unreleased_section(tmp_path):
-    path = tmp_path / "CHANGES.md"
+    path = tmp_path / "CHANGELOG.md"
     path.write_text("# Changelog\n\n## Unreleased\n\n## 1.0.0\n\n- Initial release.\n")
 
     with pytest.raises(ChangelogError, match="no release notes"):
@@ -66,7 +66,7 @@ def test_prepare_rejects_empty_unreleased_section(tmp_path):
 
 
 def test_extract_rejects_missing_version(tmp_path):
-    path = tmp_path / "CHANGES.md"
+    path = tmp_path / "CHANGELOG.md"
     path.write_text(CHANGELOG)
 
     with pytest.raises(ChangelogError, match="not found"):
