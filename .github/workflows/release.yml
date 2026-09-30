@@ -16,7 +16,14 @@ jobs:
     - uses: actions/checkout@v7
 
     - name: Extract release notes from changelog
-      run: python tools/changelog.py extract "${GITHUB_REF_NAME#v}" --output release-notes.md
+      uses: aio-libs/get-releasenote@v1.4.5
+      with:
+        changes_file: CHANGELOG.md
+        output_file: release-notes.md
+        version_file: aiofastnet/_version.py
+        start_line: '<!-- towncrier release notes start -->'
+        head_line: '## {version}(?:\n\n\*{date}\*)?\n?'
+        check_ref: true
 
     - uses: actions/upload-artifact@v7
       with:
