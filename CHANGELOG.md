@@ -1,5 +1,3 @@
-## Unreleased
-
 ## 1.1.1
 
 - Align CI and release procedure with aio-libs practices
