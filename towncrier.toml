@@ -6,15 +6,8 @@
   filename = "CHANGELOG.md"
   start_string = "<!-- towncrier release notes start -->\n"
   directory = "docs/changelog.d/"
-  title_format = ""
-  template = "docs/changelog.d/.towncrier_template.md.jinja"
-  # the issue format is bare here, but then handled in the template
-  # see changelog.d/.towncrier_template.md.jinja for details
-  issue_format = "{issue}"
-  underlines = ["", "", ""]
-
-  [[tool.towncrier.section]]
-    path = ""
+  title_format = "## {version}\n\n*{project_date}*"
+  issue_format = "[#{issue}](https://github.com/aio-libs/aiofastnet/issues/{issue})"
 
   # Fully redeclare towncrier types to control names and set 'showcontent'
 
