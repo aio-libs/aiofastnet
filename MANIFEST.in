@@ -1,8 +1,7 @@
 graft examples
 graft tests
-graft tools
 
-include CHANGES.md
+include CHANGELOG.md
 
 recursive-include aiofastnet *.pxd *.pyx
 

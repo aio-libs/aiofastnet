@@ -1,5 +1,6 @@
 import socket
 
+from ._version import __version__ as __version__
 from .api_connect_accepted_socket import connect_accepted_socket
 from .api_create_connection import create_connection
 from .api_create_datagram_endpoint import create_datagram_endpoint
@@ -26,7 +27,6 @@ from .api_streams import (
 )
 from .openssl_compat import OPENSSL_DYN_LIBS
 from .transport import Protocol, Transport, aiofn_is_buffered_protocol
-from .version import __version__ as __version__
 
 __all__ = [
     'OPENSSL_DYN_LIBS',

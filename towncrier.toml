@@ -1,5 +1,8 @@
 [tool.towncrier]
-  package = "aiofastnet"
+  name = "aiofastnet"
+  # Read the version module without importing aiofastnet's unbuilt extensions.
+  package = "_version"
+  package_dir = "aiofastnet"
   filename = "CHANGELOG.md"
   start_string = "<!-- towncrier release notes start -->\n"
   directory = "docs/changelog.d/"
