@@ -1,22 +1,4 @@
-
-
 <!-- towncrier release notes start -->
-
-## 1.2.0
-
-*2026-09-30*
-
-### Contributor-facing changes
-
-- Added templates for issues and pull requests -- by @Polandia94. ([#78](https://github.com/aio-libs/aiofastnet/issues/78), [#86](https://github.com/aio-libs/aiofastnet/issues/86))
-- Updated the security policy with private vulnerability reporting options through GitHub, the project maintainer, and aio-libs -- by @tarasko. ([#79](https://github.com/aio-libs/aiofastnet/issues/79))
-
-### Miscellaneous internal changes
-
-- Refactored transport hierarchy, prepared code for proactor transports -- by @tarasko. ([#74](https://github.com/aio-libs/aiofastnet/issues/74))
-- Converted aiofastnet logo into svg, adjusted colors to make it contrast both for light and dark themes -- by @tarasko. ([#91](https://github.com/aio-libs/aiofastnet/issues/91))
-- Set up Towncrier for managing release notes -- by @tarasko. ([#95](https://github.com/aio-libs/aiofastnet/issues/95))
-
 
 ## 1.1.1
 
