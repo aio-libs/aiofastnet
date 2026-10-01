@@ -21,9 +21,10 @@ jobs:
         changes_file: CHANGELOG.md
         output_file: release-notes.md
         version_file: aiofastnet/_version.py
+        dist_dir: ''
         start_line: '<!-- towncrier release notes start -->'
         head_line: '## {version}(?:\n\n\*{date}\*)?\n?'
-        check_ref: true
+        check_ref: ${{ github.ref }}
 
     - uses: actions/upload-artifact@v7
       with:
