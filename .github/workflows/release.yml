@@ -25,6 +25,21 @@ jobs:
         start_line: '<!-- towncrier release notes start -->'
         head_line: '## {version}(?:\n\n\*{date}\*)?\n?'
         check_ref: ${{ github.ref }}
+        # The change notes use MyST roles, which GitHub releases don't render.
+        fix_issue_regex: >-
+          \{issue\}`(\d+)`
+        fix_issue_repl: >-
+          #\1
+
+    - name: Turn the remaining MyST roles into GitHub syntax
+      shell: python
+      run: |
+        import pathlib, re
+
+        notes = pathlib.Path("release-notes.md")
+        text = re.sub(r"\{user\}`([^`]+)`", r"@\1", notes.read_text())
+        text = re.sub(r"\{commit\}`([0-9a-f]+)`", r"\1", text)
+        notes.write_text(text)
 
     - uses: actions/upload-artifact@v7
       with:
