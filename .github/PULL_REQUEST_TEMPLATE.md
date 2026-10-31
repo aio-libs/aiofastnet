@@ -24,7 +24,10 @@ entertain early in the review process. Thank you in advance!
 
 ## Related issue number
 
-<!-- Are there any issues opened that will be resolved by merging this change? -->
+<!--
+Are there any issues opened that will be resolved by merging this change?
+Remember to prefix with 'Fixes' if it closes an issue (e.g. 'Fixes #123').
+-->
 
 ## Checklist
 
@@ -32,17 +35,31 @@ entertain early in the review process. Thank you in advance!
 - [ ] Unit tests for the changes exist
 - [ ] Documentation reflects the changes
 - [ ] Add a new news fragment into the `docs/changelog.d/` folder
-  * name it `<issue_id>.<category>.md` for example (`86.contrib.md`)
-  * if you don't have an `issue_id` change it to the pr id after creating the pr
+  * name it `<issue_or_pr_num>.<category>.md` for example
+    (`86.contrib.md`)
+  * if you don't have an issue number, change it to the pull request
+    number after creating the PR
   * ensure category is one of the following:
     * `bugfix`: Signifying a bug fix.
     * `feature`: Signifying a new feature.
-    * `deprecation`: Signifying a declaration of future removals and breaking changes in behavior.
-    * `breaking`: Signifying a breaking change or removal of something public.
+    * `deprecation`: Signifying a declaration of future removals and
+      breaking changes in behavior.
+    * `breaking`: Signifying a breaking change or removal of something
+      public.
     * `doc`: Signifying a documentation improvement.
-    * `packaging`: Signifying a packaging or tooling change that may be relevant to downstreams.
-    * `contrib`: Signifying an improvement to the contributor/development experience.
-    * `misc`: Anything that does not fit the above; usually, something not of interest to users.
+    * `packaging`: Signifying a packaging or tooling change that may be
+      relevant to downstreams.
+    * `contrib`: Signifying an improvement to the contributor/development
+      experience.
+    * `misc`: Anything that does not fit the above; usually, something
+      not of interest to users.
   * Make sure to use full sentences with correct case and punctuation.
     Explain high-level effects affecting the end-users, for example:
-    "Test runner no longer crashes when loading non-ASCII contents in doctest text files."
+    ```md
+    Test runner no longer crashes when loading non-ASCII contents
+    in doctest text files -- by {user}`contributor-gh-handle`.
+    ```
+
+    Use the past tense or the present tense in a non-imperative mood,
+    referring to what's changed compared to the last released version
+    of this project.
