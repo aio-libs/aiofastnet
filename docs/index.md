@@ -6,3 +6,10 @@
 :start-line: 1
 ```
 
+```{toctree}
+:hidden:
+:maxdepth: 2
+:caption: Contents
+
+changelog
+```

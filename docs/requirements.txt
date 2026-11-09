@@ -12,6 +12,8 @@ certifi==2026.10.23
     # via requests
 charset-normalizer==3.5.2
     # via requests
+click==8.5.1
+    # via towncrier
 colorama==0.4.6 ; sys_platform == 'win32'
     # via sphinx
 docutils==0.22.4
@@ -28,6 +30,7 @@ jinja2==3.1.6
     # via
     #   myst-parser
     #   sphinx
+    #   towncrier
 markdown-it-py==4.2.0
     # via
     #   mdit-py-plugins
@@ -63,8 +66,12 @@ sphinx==9.2.0
     #   furo
     #   myst-parser
     #   sphinx-basic-ng
+    #   sphinx-issues
+    #   sphinxcontrib-towncrier
 sphinx-basic-ng==1.0.0b2
     # via furo
+sphinx-issues==6.0.0
+    # via -r docs/requirements.in
 sphinxcontrib-applehelp==2.0.0
     # via sphinx
 sphinxcontrib-devhelp==2.0.0
@@ -77,6 +84,10 @@ sphinxcontrib-qthelp==2.0.0
     # via sphinx
 sphinxcontrib-serializinghtml==2.0.0
     # via sphinx
+sphinxcontrib-towncrier==0.5.0a0
+    # via -r docs/requirements.in
+towncrier==26.9.0
+    # via sphinxcontrib-towncrier
 typing-extensions==4.16.0
     # via beautifulsoup4
 urllib3==2.8.0

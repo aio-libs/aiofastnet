@@ -38,8 +38,8 @@ simple rules!
 
 - Include a byline, `` -- by {user}`github-username` ``
 
-You can preview the rendered notes by running
-`uvx towncrier build --draft --version DRAFT_VERSION` from the repository root.
+You can preview the changelog by running `tox run -e build-docs` and viewing
+the changelog in the docs.
 
 ### Categories
 
